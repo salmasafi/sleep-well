@@ -11,7 +11,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+<<<<<<< HEAD
       //home: CollectUserData(),
+=======
+      debugShowCheckedModeBanner: false,
+>>>>>>> saif
       home: Scaffold(
         body: Center(
           child: Text('Hello World!'),
