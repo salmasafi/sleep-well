@@ -1,0 +1,2 @@
+C:/MyFolders/VS codes/Sleep_Well/sleep-well/android/app/.cxx/Debug/162b161g/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/MyFolders/VS codes/Sleep_Well/sleep-well/android/app/.cxx/Debug/162b161g/armeabi-v7a/CMakeFiles/rebuild_cache.dir
