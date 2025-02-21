@@ -1,0 +1,2 @@
+D:/sleep-well/sleep-well/android/app/.cxx/Debug/131ac1t1/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/sleep-well/sleep-well/android/app/.cxx/Debug/131ac1t1/arm64-v8a/CMakeFiles/rebuild_cache.dir

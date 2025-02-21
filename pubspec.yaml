@@ -7,14 +7,30 @@ environment:
   sdk: ^3.6.2
 
 dependencies:
+  awesome_dialog: ^3.2.1
   flutter:
     sdk: flutter
+<<<<<<< HEAD
   intl: ^0.20.2
+=======
+  flutter_screenutil: ^5.9.3
+>>>>>>> a1d70bcf5abd6be088f3b363a455aec52a0791f8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
 
+
 flutter:
   uses-material-design: true
+  fonts:
+     - family: Poppins
+       fonts:
+         - asset: assets/fonts/Poppins-Bold.ttf
+         - asset: assets/fonts/Poppins-ExtraBold.ttf
+         - asset: assets/fonts/Poppins-Regular.ttf
+         - asset: assets/fonts/Urbanist-Bold.ttf
+         - asset: assets/fonts/Urbanist-Regular.ttf
+  assets:
+     - assets/images/
