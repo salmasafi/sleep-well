@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sleep_well/Screens/Auth/signup_1.dart';
-import 'package:sleep_well/Screens/widgets/custom_button.dart';
-import 'package:sleep_well/Screens/widgets/textfield_password.dart';
-import 'package:sleep_well/Screens/widgets/textfield_email.dart';
+import 'package:sleep_well/features/auth/screens/signup_1.dart';
+import 'package:sleep_well/features/auth/widgets/custom_button.dart';
+import 'package:sleep_well/features/auth/widgets/textfield_password.dart';
+import 'package:sleep_well/features/auth/widgets/textfield_email.dart';
 import 'package:sleep_well/core/utils/colors.dart';
 
 class SigninUser extends StatelessWidget {

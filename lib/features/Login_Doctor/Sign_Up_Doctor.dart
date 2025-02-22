@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sleep_well/Login_Doctor/Widgets.dart';
+import 'package:sleep_well/features/Login_Doctor/Widgets.dart';
 
 class SignUpDoctor extends StatefulWidget {
   SignUpDoctor({super.key});

@@ -1,8 +1,8 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sleep_well/Screens/widgets/textfield_password.dart';
-import 'package:sleep_well/Screens/widgets/textfield_email.dart';
+import 'package:sleep_well/features/auth/widgets/textfield_password.dart';
+import 'package:sleep_well/features/auth/widgets/textfield_email.dart';
 import 'package:sleep_well/core/utils/colors.dart';
 
 class Signup1 extends StatelessWidget {

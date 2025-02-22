@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sleep_well/Screens/Auth/signin_user.dart';
+import 'package:sleep_well/features/auth/screens/signin_user.dart';
 import 'package:sleep_well/core/utils/colors.dart';
 
 class LoginAs extends StatelessWidget {
