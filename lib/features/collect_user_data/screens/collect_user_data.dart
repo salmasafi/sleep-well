@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sleep_well/features/collect_user_data/widgets/build_menu_item.dart';
+import 'package:sleep_well/features/collect_user_data/widgets/build_show_dialog.dart';
 
 class CollectUserData extends StatelessWidget {
   const CollectUserData({super.key});
@@ -28,16 +30,16 @@ class CollectUserData extends StatelessWidget {
          ),
          Center(child: Text("Fill out the form below to receive your diagnosis results",
            style: TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w800),)),
-         buildMenuItem("How many hours do you typically sleep each night?"),
-         buildMenuItem("How many hours do you typically sleep each night?"),
-         buildMenuItem("How many hours do you typically sleep each night?"),
-         buildMenuItem("How many hours do you typically sleep each night?"),
-         buildMenuItem("How many hours do you typically sleep each night?"),
-         buildMenuItem("How many hours do you typically sleep each night?"),
-         buildMenuItem("How many hours do you typically sleep each night?"),
-         buildMenuItem("How many hours do you typically sleep each night?"),
-         buildMenuItem("How many hours do you typically sleep each night?"),
-         buildMenuItem("How many hours do you typically sleep each night?"),
+         BuildMenuItem(text: "How many hours do you typically sleep each night?"),
+         BuildMenuItem(text: "How many hours do you typically sleep each night?"),
+         BuildMenuItem(text: "How many hours do you typically sleep each night?"),
+         BuildMenuItem(text: "How many hours do you typically sleep each night?"),
+         BuildMenuItem(text: "How many hours do you typically sleep each night?"),
+         BuildMenuItem(text: "How many hours do you typically sleep each night?"),
+         BuildMenuItem(text: "How many hours do you typically sleep each night?"),
+         BuildMenuItem(text: "How many hours do you typically sleep each night?"),
+         BuildMenuItem(text: "How many hours do you typically sleep each night?"),
+         BuildMenuItem(text: "How many hours do you typically sleep each night?"),
          Center(
            child: Container(
              width:143 ,
@@ -46,7 +48,9 @@ class CollectUserData extends StatelessWidget {
                borderRadius: BorderRadius.circular(1234),
              ),
              child: ElevatedButton(
-                 onPressed: (){},
+                 onPressed: (){
+                   buildShowDialog(context);
+                 },
                  style: ButtonStyle(
                    backgroundColor: WidgetStatePropertyAll(Color(0xff54408C)),
                  ),
@@ -60,22 +64,18 @@ class CollectUserData extends StatelessWidget {
      ),
     );
   }
-  Widget buildMenuItem(String text) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal:16 ,vertical:8 ),
-        child: Container(
-          width: 343,
-          height: 40,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(1234),
-          ),
-          child: Card(
-            child: Text(text, style: TextStyle(fontSize: 11, fontWeight: FontWeight.w400, color: Colors.black),),
-          ),
-        ),
-      ),
+
+
+   /*void showDialogResult(BuildContext context){
+    ShowDialog(
+      context:context,
+      builder: (context){
+        return Dialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        );
+      }
     );
-      
-  }
+   }*/
 }
+
+
