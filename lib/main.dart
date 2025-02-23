@@ -12,12 +12,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-<<<<<<< HEAD
-      home: SignInDoctor(),
+      home: Center(
+        child: Text("Sleep Well"),
+      ),
       //home: CollectUserData(),
       debugShowCheckedModeBanner: false,
-      ),
->>>>>>> saif
     );
   }
 }
