@@ -9,10 +9,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xFF1A1A38),
+        backgroundColor: const Color(0xFF1A1A38),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -23,12 +24,13 @@ class Home extends StatelessWidget {
                   height: screenHeight * 0.1,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    color: Color(0XFF191949),
+                    color: const Color(0XFF191949),
                   ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 45),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 45),
                         child: Text(
                           "Account",
                           style: TextStyle(
@@ -40,13 +42,13 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 100),
+                        padding: const EdgeInsets.only(right: 20),
                         child: InkWell(
                           onTap: () {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => UpdateProfile()),
+                                  builder: (context) => const UpdateProfile()),
                             );
                           },
                           child: CircleAvatar(
@@ -61,239 +63,73 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 25, left: 30),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color(0xFF14142F), // Dark background
-                        minimumSize: Size(screenWidth * 0.4,
-                            screenHeight * 0.2), // Custom size
-                        shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(12), // Rounded edges
-                        ),
-                        elevation: 5,
-                      ),
-                      onPressed: () {},
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/library_logo.png",
-                          ),
-                          SizedBox(height: 15),
-                          Text(
-                            'Library',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: "Poppins",
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 25, left: 30),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color(0xFF14142F), // Dark background
-                        minimumSize: Size(screenWidth * 0.4,
-                            screenHeight * 0.2), // Custom size
-                        shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(12), // Rounded edges
-                        ),
-                        elevation: 5,
-                      ),
-                      onPressed: () {},
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/meditation.png",
-                          ),
-                          SizedBox(height: 15),
-                          Text(
-                            'meditation\n&relaxation',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: "Poppins",
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 25, left: 30),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color(0xFF14142F), // Dark background
-                        minimumSize: Size(screenWidth * 0.4,
-                            screenHeight * 0.2), // Custom size
-                        shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(20), // Rounded edges
-                        ),
-                        elevation: 5,
-                      ),
-                      onPressed: () {},
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/chatbot_logo.png",
-                          ),
-                          SizedBox(height: 15),
-                          Text(
-                            'ChatBot',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: "Poppins",
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 25, left: 30),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color(0xFF14142F), // Dark background
-                        minimumSize: Size(screenWidth * 0.4,
-                            screenHeight * 0.2), // Custom size
-                        shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(20), // Rounded edges
-                        ),
-                        elevation: 5,
-                      ),
-                      onPressed: () {},
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/food_logo.png",
-                          ),
-                          SizedBox(height: 15),
-                          Text(
-                            'healthy\n food',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: "Poppins",
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 25, left: 30),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color(0xFF14142F), // Dark background
-                        minimumSize: Size(screenWidth * 0.4,
-                            screenHeight * 0.2), // Custom size
-                        shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(20), // Rounded edges
-                        ),
-                        elevation: 5,
-                      ),
-                      onPressed: () {},
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/doctor_logo.png",
-                          ),
-                          SizedBox(height: 15),
-                          Text(
-                            'ChatWith\nDoctor',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: "Poppins",
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 25, left: 30),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color(0xFF14142F), // Dark background
-                        minimumSize: Size(screenWidth * 0.4,
-                            screenHeight * 0.2), // Custom size
-                        shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(20), // Rounded edges
-                        ),
-                        elevation: 5,
-                      ),
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Feedback_screen()),
-                        );
-                      },
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/feedback_logo.png",
-                          ),
-                          SizedBox(height: 15),
-                          Text(
-                            'FeedBack',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: "Poppins",
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: GridView.count(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  crossAxisCount: 2, // Two columns
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                  childAspectRatio: 1, // Keeps buttons square-like
+                  children: [
+                    _buildGridButton(context, "Library",
+                        "assets/images/library_logo.png", () {}),
+                    _buildGridButton(context, "Meditation & Relaxation",
+                        "assets/images/meditation.png", () {}),
+                    _buildGridButton(context, "ChatBot",
+                        "assets/images/chatbot_logo.png", () {}),
+                    _buildGridButton(context, "Healthy Food",
+                        "assets/images/food_logo.png", () {}),
+                    _buildGridButton(context, "ChatWith Doctor",
+                        "assets/images/doctor_logo.png", () {}),
+                    _buildGridButton(
+                        context, "Feedback", "assets/images/feedback_logo.png",
+                        () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FeedbackScreen()),
+                      );
+                    }),
+                  ],
+                ),
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildGridButton(BuildContext context, String text, String imagePath,
+      VoidCallback onPressed) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFF14142F),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        elevation: 5,
+        padding: EdgeInsets.zero,
+      ),
+      onPressed: onPressed,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(imagePath, height: 90),
+          const SizedBox(height: 10),
+          Text(
+            text,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              color: Colors.white,
+              fontFamily: "Poppins",
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ],
       ),
     );
   }
