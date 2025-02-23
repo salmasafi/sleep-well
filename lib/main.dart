@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+//import 'package:sleep_well/features/home/presentation/home.dart';
+//import 'package:sleep_well/features/collect_user_data/screens/collect_user_data.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,11 +12,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      //home: CollectUserData(),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+        body: Center(child: Text("Hello Wolrd")),
       ),
     );
   }
