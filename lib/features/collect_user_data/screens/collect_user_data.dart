@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sleep_well/features/collect_user_data/widgets/build_menu_item.dart';
 import 'package:sleep_well/features/collect_user_data/widgets/build_show_dialog.dart';
 
@@ -13,14 +14,11 @@ class CollectUserData extends StatelessWidget {
        //mainAxisAlignment: MainAxisAlignment.start,
        crossAxisAlignment: CrossAxisAlignment.start,
        children: [
-         /*SizedBox(
-           height: 45,
-         ),*/
          Padding(
            padding: const EdgeInsets.symmetric(horizontal: 31,vertical: 45),
            child: Container(
-             width: 32,
-               height: 32,
+             width: 32.w,
+               height: 32.h,
                decoration: BoxDecoration(
                  borderRadius: BorderRadius.circular(8),
                    color: Color(0xff54408C),
@@ -29,7 +27,7 @@ class CollectUserData extends StatelessWidget {
                child: Center(child: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios,size: 16, color: Colors.white,)))),
          ),
          Center(child: Text("Fill out the form below to receive your diagnosis results",
-           style: TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w800),)),
+           style: TextStyle(color: Colors.white,fontSize: 14,fontFamily:'Poppins',fontWeight: FontWeight.w800),)),
          BuildMenuItem(text: "How many hours do you typically sleep each night?"),
          BuildMenuItem(text: "How many hours do you typically sleep each night?"),
          BuildMenuItem(text: "How many hours do you typically sleep each night?"),
@@ -42,8 +40,8 @@ class CollectUserData extends StatelessWidget {
          BuildMenuItem(text: "How many hours do you typically sleep each night?"),
          Center(
            child: Container(
-             width:143 ,
-             height:50 ,
+             width:143.w ,
+             height:50.h ,
              decoration: BoxDecoration(
                borderRadius: BorderRadius.circular(1234),
              ),
