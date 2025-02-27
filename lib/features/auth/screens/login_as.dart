@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sleep_well/features/auth/screens/signin_user.dart';
 import 'package:sleep_well/core/utils/colors.dart';
+import 'package:sleep_well/features/Login_Doctor/Sign_In_Doctor.dart';
+import 'signin_user.dart';
 
 class LoginAs extends StatelessWidget {
   const LoginAs({super.key});
@@ -15,7 +16,9 @@ class LoginAs extends StatelessWidget {
         ),
         body: Column(
           children: [
-            SizedBox(height: 35.h,) , 
+            SizedBox(
+              height: 35.h,
+            ),
             Center(
               child: SizedBox(
                 child: Image.asset(
@@ -51,7 +54,11 @@ class LoginAs extends StatelessWidget {
                 color: AppColors.buttonColor,
                 minWidth: 330.w,
                 height: 60.h,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => SignInDoctor(),
+                  ));
+                },
                 child: Text(
                   "Doctor",
                   style: TextStyle(
@@ -63,12 +70,14 @@ class LoginAs extends StatelessWidget {
             SizedBox(
               height: 30.h,
             ),
-              MaterialButton(
+            MaterialButton(
                 color: AppColors.buttonColor,
                 minWidth: 330.w,
                 height: 60.h,
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => SigninUser(),)) ;
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => SigninUser(),
+                  ));
                 },
                 child: Text(
                   "Patient",

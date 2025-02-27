@@ -3,8 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sleep_well/core/utils/colors.dart';
 
 class CustomButton extends StatelessWidget {
-  final String text ;
-  const CustomButton({super.key, required this.text});
+  final String text;
+  final void Function()? onPressed;
+  const CustomButton({super.key, required this.text, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class CustomButton extends StatelessWidget {
       style: ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(AppColors.buttonColor),
           fixedSize: WidgetStatePropertyAll(Size(350.w, 60.h))),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Row(
         children: [
           SizedBox(

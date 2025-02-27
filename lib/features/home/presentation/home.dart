@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sleep_well/features/collect_user_data/screens/collect_user_data.dart';
 import 'package:sleep_well/features/update_profile/presentation/update_profile.dart';
 import 'package:sleep_well/features/feedback/presentation/feedback.dart';
 
@@ -82,11 +83,17 @@ class Home extends StatelessWidget {
                     _buildGridButton(context, "Healthy Food",
                         "assets/images/food_logo.png", () {}),
                     _buildGridButton(context, "ChatWith Doctor",
-                        "assets/images/doctor_logo.png", () {}),
+                        "assets/images/doctor_logo.png", () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CollectUserData()),
+                      );
+                    }),
                     _buildGridButton(
                         context, "Feedback", "assets/images/feedback_logo.png",
                         () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const FeedbackScreen()),

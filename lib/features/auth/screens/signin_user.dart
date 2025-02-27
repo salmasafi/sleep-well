@@ -5,6 +5,7 @@ import 'package:sleep_well/features/auth/widgets/custom_button.dart';
 import 'package:sleep_well/features/auth/widgets/textfield_password.dart';
 import 'package:sleep_well/features/auth/widgets/textfield_email.dart';
 import 'package:sleep_well/core/utils/colors.dart';
+import 'package:sleep_well/features/home/presentation/home.dart';
 
 class SigninUser extends StatelessWidget {
   const SigninUser({super.key});
@@ -44,7 +45,14 @@ class SigninUser extends StatelessWidget {
                 SizedBox(
                   height: 15.h,
                 ),
-                CustomButton(text: "Sign In"),
+                CustomButton(
+                  text: "Sign In",
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Home(),
+                    ));
+                  },
+                ),
                 SizedBox(
                   height: 150.h,
                 ),

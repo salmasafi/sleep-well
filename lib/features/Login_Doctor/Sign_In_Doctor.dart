@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:sleep_well/features/Login_Doctor/Sign_Up_Doctor.dart';
 import 'package:sleep_well/features/Login_Doctor/Widgets.dart';
+import 'package:sleep_well/features/home/presentation/home.dart';
 
 class SignInDoctor extends StatelessWidget {
   const SignInDoctor({super.key});
@@ -65,7 +66,7 @@ class SignInDoctor extends StatelessWidget {
               ),
               ButtonWidget(
                 FontsFamily: 'Urbanist',
-                Location: SignInDoctor(),
+                Location: Home(),
                 NameButton: "Sign In",
                 Screenheight: Screenheight,
                 AddIcon: true,
