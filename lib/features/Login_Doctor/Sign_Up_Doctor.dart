@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sleep_well/features/Login_Doctor/Widgets.dart';
 
 class SignUpDoctor extends StatefulWidget {
-  SignUpDoctor({super.key});
+  const SignUpDoctor({super.key});
 
   @override
   State<SignUpDoctor> createState() => _SignUpDoctorState();
@@ -212,7 +212,7 @@ class _SignUpDoctorState extends State<SignUpDoctor> {
             borderRadius: BorderRadius.circular(10),
           ),
           backgroundColor: Colors.white.withOpacity(0.85),
-          child: Container(
+          child: SizedBox(
             height: screenHeight * 0.2,
             width: screenHeight * 0.3,
             child: Stack(
@@ -261,7 +261,7 @@ class _SignUpDoctorState extends State<SignUpDoctor> {
     );
   }
 
-  GestureDetector PM_AM(String AM_PM, bool isAM, double Screenheight) {
+  GestureDetector PM_AM(String amPm, bool isAM, double Screenheight) {
     return GestureDetector(
       onTap: () {
         setState(() {
@@ -279,7 +279,7 @@ class _SignUpDoctorState extends State<SignUpDoctor> {
               : [],
         ),
         child: Text(
-          AM_PM,
+          amPm,
           style: TextStyle(
             fontFamily: "Roboto",
             color: Color(0xFF213447),
@@ -291,11 +291,11 @@ class _SignUpDoctorState extends State<SignUpDoctor> {
   }
 
   GestureDetector PM_AM_After(
-      String AM_PM, bool isAM_After, double Screenheight) {
+      String amPm, bool isamAfter, double Screenheight) {
     return GestureDetector(
       onTap: () {
         setState(() {
-          isAMSelected_After = isAM_After;
+          isAMSelected_After = isamAfter;
         });
       },
       child: Container(
@@ -303,15 +303,15 @@ class _SignUpDoctorState extends State<SignUpDoctor> {
             vertical: Screenheight * 0.0085, horizontal: Screenheight * 0.01),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: isAMSelected_After == isAM_After
+          color: isAMSelected_After == isamAfter
               ? Colors.white
               : Colors.transparent,
-          boxShadow: isAMSelected_After == isAM_After
+          boxShadow: isAMSelected_After == isamAfter
               ? [BoxShadow(color: Colors.grey, blurRadius: 4)]
               : [],
         ),
         child: Text(
-          AM_PM,
+          amPm,
           style: TextStyle(
             fontFamily: "Roboto",
             color: Color(0xFF213447),
@@ -339,7 +339,7 @@ class _SignUpDoctorState extends State<SignUpDoctor> {
             showModalBottomSheet(
               context: context,
               builder: (BuildContext context) {
-                return Container(
+                return SizedBox(
                   height: Screenheight * 0.5,
                   child: CupertinoTimerPicker(
                     mode: CupertinoTimerPickerMode.hm,

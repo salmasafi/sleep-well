@@ -33,3 +33,10 @@ flutter:
          - asset: assets/fonts/Urbanist-Regular.ttf
   assets:
      - assets/images/
+     - assets/images/splash.png
+     - assets/images/OBJECTS.png
+     - assets/images/doctor.png
+     - assets/images/robot.png
+     - assets/images/amico.png
+
+     

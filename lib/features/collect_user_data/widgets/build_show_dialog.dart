@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 Future<dynamic> buildShowDialog(BuildContext context) {
   return showDialog(context: context, builder: (BuildContext context){
-    return Container(
+    return SizedBox(
       height: 104.h,
       width:279.w ,
       child: AlertDialog(
