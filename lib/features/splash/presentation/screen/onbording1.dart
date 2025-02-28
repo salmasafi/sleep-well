@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sleep_well/core/utils/colors.dart';
 import 'package:sleep_well/features/splash/presentation/widget/SkipWidget.dart';
+import 'package:sleep_well/features/splash/presentation/screen/Onbording2.dart';
 
 
-void main() {
-  runApp(const MaterialApp(
-    home: Onbording2(),
-  ));
-}
 
-class Onbording2 extends StatelessWidget {
-  const Onbording2({super.key});
+class Onbording1 extends StatelessWidget {
+  const Onbording1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +22,6 @@ class Onbording2 extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              
               const SizedBox(height: 20),
               Text(
                 "SleepWell",
@@ -49,7 +44,18 @@ class Onbording2 extends StatelessWidget {
               const SizedBox(height: 30),
               const CircularProgressIndicator(),
               const SizedBox(height: 90),
-              const SkipWidget(),
+              const Spacer(),
+              SkipWidget(
+                onSkip: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Onbording2()),
+                  );
+                }, onNext: () { Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Onbording2()),
+                  ); },
+              ),
             ],
           ),
         ),

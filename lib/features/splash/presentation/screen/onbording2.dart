@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sleep_well/core/utils/colors.dart';
 import 'package:sleep_well/features/splash/presentation/widget/SkipWidget.dart';
+import 'package:sleep_well/features/splash/presentation/screen/OnbordingDctor.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: Onbording2(),
-  ));
-}
 
 class Onbording2 extends StatelessWidget {
   const Onbording2({super.key});
@@ -57,7 +53,17 @@ class Onbording2 extends StatelessWidget {
               const SizedBox(height: 30),
               const CircularProgressIndicator(),
               const SizedBox(height: 50), 
-              const SkipWidget(),
+               SkipWidget(
+                onSkip: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const OnbordingDctor()),
+                  );
+                }, onNext: () { Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const OnbordingDctor()),
+                  ); },
+              ),
               const SizedBox(height: 20), 
             ],
           ),

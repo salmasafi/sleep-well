@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:sleep_well/core/utils/colors.dart';
 
 class SkipWidget extends StatelessWidget {
-  const SkipWidget({super.key});
+  final VoidCallback onSkip;
+  final VoidCallback onNext;
+  final Widget? customWidget;
+
+  const SkipWidget({
+    super.key,
+    required this.onSkip,
+    required this.onNext,
+    this.customWidget,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +20,8 @@ class SkipWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-           TextButton(
-            onPressed: () {},
+          TextButton(
+            onPressed: onSkip,
             child: Text(
               "Skip",
               style: TextStyle(
@@ -22,18 +31,19 @@ class SkipWidget extends StatelessWidget {
               ),
             ),
           ),
+          customWidget ??
           IconButton(
-            onPressed: () {},
-            icon:  Icon(
+            onPressed: onNext,
+            icon: Icon(
               Icons.arrow_right_alt_outlined,
-              color:AppColors.whiteColor,
+              color: AppColors.whiteColor,
               size: 32,
             ),
           ),
-      
         ],
       ),
     );
   }
 }
+
 
