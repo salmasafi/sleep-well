@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sleep_well/core/utils/colors.dart';
 import 'package:sleep_well/features/splash/presentation/widget/SkipWidget.dart';
+import 'package:sleep_well/features/splash/presentation/screen/onbordingRobot.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -53,7 +54,17 @@ class OnbordingAmico extends StatelessWidget {
               const SizedBox(height: 20),
               const CircularProgressIndicator(),
               const SizedBox(height: 50), 
-              const SkipWidget(),
+               SkipWidget(
+                onSkip: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const OnbordingRobot()),
+                  );
+                }, onNext: () { Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const OnbordingRobot()),
+                  ); },
+              ),
               const SizedBox(height: 20), 
             ],
           ),
