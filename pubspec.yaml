@@ -4,29 +4,60 @@ publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: ^3.6.2
+  sdk: '>=3.6.2 <4.0.0'
 
 dependencies:
-  awesome_dialog: ^3.2.1
   flutter:
     sdk: flutter
+  awesome_dialog: ^3.2.1
+  flutter_pdfview: ^1.4.0
   flutter_screenutil: ^5.9.3
+  path_provider: ^2.0.11
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
 
-
 flutter:
   uses-material-design: true
+
   fonts:
-     - family: Poppins
-       fonts:
-         - asset: assets/fonts/Poppins-Bold.ttf
-         - asset: assets/fonts/Poppins-ExtraBold.ttf
-         - asset: assets/fonts/Poppins-Regular.ttf
-         - asset: assets/fonts/Urbanist-Bold.ttf
-         - asset: assets/fonts/Urbanist-Regular.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Bold.ttf
+        - asset: assets/fonts/Poppins-ExtraBold.ttf
+        - asset: assets/fonts/Poppins-Regular.ttf
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/Urbanist-Bold.ttf
+        - asset: assets/fonts/Urbanist-Regular.ttf
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter_18pt-Bold.ttf
+        - asset: assets/fonts/Inter_18pt-Regular.ttf    
+        - asset: assets/fonts/Inter_24pt-Bold.ttf
+        - asset: assets/fonts/Inter_24pt-Regular.ttf    
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Bold.ttf
+        - asset: assets/fonts/Raleway-Regular.ttf
+  
+        
+
   assets:
-     - assets/images/
+    - assets/images/
+    - assets/images/splash.png
+    - assets/images/OBJECTS.png
+    - assets/images/doctor.png
+    - assets/images/robot.png
+    - assets/images/amico.png
+    - assets/images/breakfast.png
+    - assets/images/vege.png
+    - assets/images/egg.png
+    - assets/images/potatos.png
+    - assets/images/taco.png
+    - assets/images/doc1.png
+    - assets/images/drahmad.png
+    - assets/images/user.jpg
