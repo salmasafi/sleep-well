@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sleep_well/core/utils/colors.dart';
+import 'package:sleep_well/features/splash/presentation/screen/onbordingAmico.dart';
 import 'package:sleep_well/features/splash/presentation/widget/SkipWidget.dart';
-import 'package:sleep_well/features/splash/presentation/screen/OnbordingAmico.dart';
 
 void main() {
   runApp(const MaterialApp(

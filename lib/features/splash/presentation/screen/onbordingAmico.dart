@@ -3,11 +3,6 @@ import 'package:sleep_well/core/utils/colors.dart';
 import 'package:sleep_well/features/splash/presentation/widget/SkipWidget.dart';
 import 'package:sleep_well/features/splash/presentation/screen/onbordingRobot.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: OnbordingAmico(),
-  ));
-}
 
 class OnbordingAmico extends StatelessWidget {
   const OnbordingAmico({super.key});

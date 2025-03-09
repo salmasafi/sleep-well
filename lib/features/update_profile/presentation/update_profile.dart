@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sleep_well/core/utils/colors.dart';
+import 'package:sleep_well/features/home/Widgets/logout.dart';
 import 'package:sleep_well/features/home/presentation/home.dart';
 
 class UpdateProfile extends StatelessWidget {
@@ -6,9 +9,7 @@ class UpdateProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: const Color(0xFF1A1A38),
         body: LayoutBuilder(
           builder: (context, constraints) {
@@ -33,13 +34,13 @@ class UpdateProfile extends StatelessWidget {
                           width: screenWidth * 0.1,
                           height: screenWidth * 0.1,
                           decoration: BoxDecoration(
-                            color: const Color(0xFF54408C),
+                            color: AppColors.buttonColor,
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          child: const Icon(
+                          child:  Icon(
                             Icons.arrow_back_ios_new,
                             color: Colors.white,
-                            size: 18,
+                            size: 18.sp,
                           ),
                         ),
                       ),
@@ -47,7 +48,7 @@ class UpdateProfile extends StatelessWidget {
                       Text(
                         "Edit Profile",
                         style: TextStyle(
-                          color: Colors.white,
+                          color:AppColors.whiteColor,
                           fontSize: screenWidth * 0.06,
                           fontWeight: FontWeight.w600,
                           fontFamily: "Poppins",
@@ -56,6 +57,22 @@ class UpdateProfile extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: screenHeight * 0.05),
+                   Center(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Color(0xFFF9F9F9)),
+                      height: screenHeight * 0.2,
+                      width: screenHeight * 0.2,
+                      child: Center(
+                        child: Icon(
+                          Icons.camera_alt_outlined,
+                          size: screenHeight * 0.05,
+                          color: Color(0xFF9D9DA8),
+                        ),
+                      ),
+                    ),
+                  ),
 
                   // Username Field
                   buildInputField(
@@ -76,94 +93,16 @@ class UpdateProfile extends StatelessWidget {
                   SizedBox(height: screenHeight * 0.06),
 
                   // Update Button
-                  Center(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          barrierDismissible: false,
-                          builder: (BuildContext context) {
-                            return AlertDialog(
-                              backgroundColor: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              content: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.green,
-                                    ),
-                                    padding: const EdgeInsets.all(10),
-                                    child: const Icon(
-                                      Icons.check,
-                                      color: Colors.white,
-                                      size: 50,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 16),
-                                  const Text(
-                                    "Successfully Updated!",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 16),
-                                  ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.green,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                    ),
-                                    onPressed: () => Navigator.pop(context),
-                                    child: const Text(
-                                      "OK",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontFamily: "Poppins",
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            );
-                          },
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        minimumSize:
-                            Size(screenWidth * 0.8, screenHeight * 0.06),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        elevation: 5,
-                      ),
-                      child: Text(
-                        "Update",
-                        style: TextStyle(
-                          color: const Color(0xFF14142F),
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.w700,
-                          fontSize: screenWidth * 0.05,
-                        ),
-                      ),
-                    ),
-                  ),
+                  UpdateButton(screenWidth: screenWidth, screenHeight: screenHeight),
+                  SizedBox(height: 10.h,) ,
+
+                  logoutDocButton(screenWidth: screenWidth, screenHeight: screenHeight)
                 ],
               ),
             );
           },
-        ),
-      ),
-    );
+        ) );
+  
   }
 
   // Reusable Widget for Input Fields
@@ -210,5 +149,102 @@ class UpdateProfile extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+class UpdateButton extends StatelessWidget {
+  const UpdateButton({
+    super.key,
+    required this.screenWidth,
+    required this.screenHeight,
+  });
+
+  final double screenWidth;
+  final double screenHeight;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: ElevatedButton(
+        onPressed: () {
+          showDialog(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                backgroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                content: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.green,
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      child: const Icon(
+                        Icons.check,
+                        color: Colors.white,
+                        size: 50,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    const Text(
+                      "Successfully Updated!",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.green,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      onPressed: () => Navigator.pop(context),
+                      child: const Text(
+                        "OK",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
+        },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+          minimumSize:
+              Size(screenWidth * 0.8, screenHeight * 0.06),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          elevation: 5,
+        ),
+        child: Text(
+          "Update",
+          style: TextStyle(
+            color: const Color(0xFF14142F),
+            fontFamily: "Poppins",
+            fontWeight: FontWeight.w700,
+            fontSize: screenWidth * 0.05,
+          ),
+        ),
+      ),
+    ) ;  
+
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sleep_well/core/utils/colors.dart';
-import 'package:sleep_well/features/splash/presentation/screen/Onbording1.dart';
+import 'package:sleep_well/features/splash/presentation/screen/onbording1.dart';
 
 void main() {
   runApp(const MaterialApp(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sleep_well/core/utils/colors.dart';
+import 'package:sleep_well/features/splash/presentation/screen/onbordingDctor.dart';
 import 'package:sleep_well/features/splash/presentation/widget/SkipWidget.dart';
-import 'package:sleep_well/features/splash/presentation/screen/OnbordingDctor.dart';
 
 
 class Onbording2 extends StatelessWidget {

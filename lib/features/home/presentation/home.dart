@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sleep_well/features/collect_user_data/screens/collect_user_data.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sleep_well/core/utils/colors.dart';
+import 'package:sleep_well/features/home/Screens/messages.dart';
+import 'package:sleep_well/features/home/Screens/healthy_food.dart';
 import 'package:sleep_well/features/update_profile/presentation/update_profile.dart';
 import 'package:sleep_well/features/feedback/presentation/feedback.dart';
 
@@ -14,7 +17,7 @@ class Home extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: const Color(0xFF1A1A38),
+        backgroundColor: AppColors.backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -24,20 +27,20 @@ class Home extends StatelessWidget {
                   width: screenWidth * 0.85,
                   height: screenHeight * 0.1,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
+                    borderRadius: BorderRadius.circular(50.r),
                     color: const Color(0XFF191949),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.only(left: 45),
                         child: Text(
                           "Account",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: "Poppins",
-                            fontSize: 24,
+                            fontSize: 24.sp,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -53,7 +56,7 @@ class Home extends StatelessWidget {
                             );
                           },
                           child: CircleAvatar(
-                            radius: 27,
+                            radius: 27.r,
                             backgroundColor: Color(0xFF2a246a),
                             child:
                                 Image.asset("assets/images/image_account.png"),
@@ -80,14 +83,21 @@ class Home extends StatelessWidget {
                         "assets/images/meditation.png", () {}),
                     _buildGridButton(context, "ChatBot",
                         "assets/images/chatbot_logo.png", () {}),
-                    _buildGridButton(context, "Healthy Food",
-                        "assets/images/food_logo.png", () {}),
+                    _buildGridButton(
+                        context, "Healthy Food", "assets/images/food_logo.png",
+                        () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HealthyFood(),
+                          ));
+                    }),
                     _buildGridButton(context, "ChatWith Doctor",
                         "assets/images/doctor_logo.png", () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CollectUserData()),
+                            builder: (context) => const Messages()),
                       );
                     }),
                     _buildGridButton(
@@ -129,10 +139,10 @@ class Home extends StatelessWidget {
           Text(
             text,
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.white,
               fontFamily: "Poppins",
-              fontSize: 16,
+              fontSize: 16.sp,
               fontWeight: FontWeight.w500,
             ),
           ),

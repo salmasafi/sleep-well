@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sleep_well/core/utils/colors.dart';
+import 'package:sleep_well/features/splash/presentation/screen/onbording2.dart';
 import 'package:sleep_well/features/splash/presentation/widget/SkipWidget.dart';
-import 'package:sleep_well/features/splash/presentation/screen/Onbording2.dart';
 
 
 

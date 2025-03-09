@@ -1,0 +1,2 @@
+E:/New folder (2)/sleep-well/android/app/.cxx/Debug/575w3v1v/armeabi-v7a/CMakeFiles/edit_cache.dir
+E:/New folder (2)/sleep-well/android/app/.cxx/Debug/575w3v1v/armeabi-v7a/CMakeFiles/rebuild_cache.dir
